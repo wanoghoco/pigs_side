@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+
+  <base href="/pigs_side/">
+
+  <meta charset="UTF-8">
+  <!-- <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate"/>
+<meta http-equiv="Pragma" content="no-cache"/>
+<meta http-equiv="Expires" content="0"/> -->
+  <meta content="IE=Edge" http-equiv="X-UA-Compatible">
+  <meta name="description" content="A new Flutter project.">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="apple-mobile-web-app-title" content="PIG">
+  <link rel="apple-touch-icon" href="icons/Icon-192.png">
+  <link rel="icon" type="image/png" href="favicon.png" />
+  <title>PIG</title>
+  <link rel="manifest" href="manifest.json">
+  <script>
+    const serviceWorkerVersion = "1552666563";
+  </script>
+  <script src="https://telegram.org/js/telegram-web-app.js" defer=""></script>
+  <script src="flutter.js?version=22" defer></script>
+
+  <style>
+    body {
+      touch-action: none !important;
+    }
+  </style>
+  <style>
+    .loader {
+      border: 1px solid #f3f3f3;
+      /* Light grey */
+      border-top: 16px solid rgb(1, 41, 5);
+      /* Specified color */
+      border-radius: 50%;
+      width: 40px;
+      height: 40px;
+      animation: spin 2s linear infinite;
+      margin: 0 auto;
+    }
+
+    @keyframes spin {
+      0% {
+        transform: rotate(0deg);
+      }
+
+      100% {
+        transform: rotate(360deg);
+      }
+    }
+  </style>
+</head>
+
+<body style="background-color: black!important;height: 100%!important;">
+  <div style=" margin-top: 30vh!important"></div>
+  <img src="pig.png" style="display:block;margin:auto;" width="70%">
+  <div class="loader"></div>
+  <br><br>
+  <p style="font-size: 14;color:#e2e2e2; text-align: center;">v2.5</p>
+  <script>
+    window.addEventListener('load', function (ev) {
+      // Download main.dart.js
+      _flutter.loader.loadEntrypoint({
+        serviceWorker: {
+          serviceWorkerVersion: serviceWorkerVersion,
+        },
+        onEntrypointLoaded: function (engineInitializer) {
+          engineInitializer.initializeEngine().then(function (appRunner) {
+            appRunner.runApp();
+          });
+        }
+      });
+
+      document.addEventListener("touchmove", function (event) {
+        event.preventDefault();
+      },
+        {
+          passive: false
+        });
+
+      Telegram.WebApp.expand()
+      // const overflow = 100
+      // document.body.style.overflowY = 'hidden'
+      // document.body.style.marginTop = `${overflow}px`
+      // document.body.style.height = window.innerHeight + overflow + "px"
+      // document.body.style.paddingBottom = `${overflow}px`
+      // window.scrollTo(0, overflow);
+    });
+
+
+
+  </script>
+</body>
+
+</html>
