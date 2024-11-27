@@ -20,7 +20,7 @@
   <title>PIG</title>
   <link rel="manifest" href="manifest.json">
   <script>
-    const serviceWorkerVersion = "478531505";
+    const serviceWorkerVersion = "1171327009";
   </script>
   <script src="https://sad.adsgram.ai/js/sad.min.js"></script>
   <script src="https://telegram.org/js/telegram-web-app.js" defer=""></script>
@@ -173,7 +173,9 @@
 
     async function connectToWallet() {
       if (isWalletConnected()) {
-        getConnectedWalletAddress();
+        console.log(tonConnectUI.wallet.account.publicKey);
+        console.log(tonConnectUI.wallet.account.publicKey);
+        console.log(tonConnectUI.wallet.account.publicKey);
         alert("wallet connected");
         return;
       }
@@ -189,11 +191,7 @@
       return tonConnectUI.connected;
     }
 
-    function getConnectedWalletAddress() {
-      console.log(tonConnectUI.wallet.account.publicKey);
-      console.log(tonConnectUI.wallet.account.publicKey);
-      console.log(tonConnectUI.wallet.account.publicKey);
-    }
+
 
     async function disconnectWallet() {
       if (!isWalletConnected()) {
